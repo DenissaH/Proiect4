@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proiect4.ListEleviPage"
+             Title="Baza de date a elevilor">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Adauga Elevi" 
+                 Clicked="OnEleviAddedClicked" />
+    </ContentPage.ToolbarItems>
+
+    <VerticalStackLayout>
+        <ListView x:Name="listView" 
+                  Margin="20" 
+                  ItemSelected="OnListViewItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding NumeComplet}" 
+                              Detail="{Binding Clasa}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </VerticalStackLayout>
+</ContentPage>

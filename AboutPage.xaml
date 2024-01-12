@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Proiect4"
+             x:Class="Proiect4.AboutPage"
+             Title="Indormatii despre Catalog">
+    <VerticalStackLayout Spacing="10" Margin="10">
+        <HorizontalStackLayout Spacing="10">
+            <Label FontSize="25" FontAttributes="Bold" Text="Catalog online pentru liceu" VerticalOptions="End" />
+            <Label FontSize="22" Text="v4.0" VerticalOptions="End" />
+        </HorizontalStackLayout>
+        <Label Text="Acesta eset un catalog online folosit in cadrul liceului." />
+    </VerticalStackLayout>
+</ContentPage>

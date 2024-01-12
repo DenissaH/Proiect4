@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:Proiect4.Models"
+             x:Class="Proiect4.ButtonPage"
+             Title="Baza de date a elevilor">
+
+    <StackLayout Margin="20">
+        <Entry Placeholder="Nume" Text="{Binding Nume}" />
+        <Entry Placeholder="Prenume" Text="{Binding Prenume}" />
+
+
+        <Picker Title="Selectează Profil" SelectedItem="{Binding Profil}">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type local:ProfilEnum}">
+                    <local:ProfilEnum>Mateinfo</local:ProfilEnum>
+                    <local:ProfilEnum>StiinteleNaturii</local:ProfilEnum>
+                    <local:ProfilEnum>StiinteSociale</local:ProfilEnum>
+                    <local:ProfilEnum>Filologie</local:ProfilEnum>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Picker Title="Selectează Clasa" SelectedItem="{Binding Clasa}">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type local:ClasaEnum}">
+                    <local:ClasaEnum>IX</local:ClasaEnum>
+                    <local:ClasaEnum>X</local:ClasaEnum>
+                    <local:ClasaEnum>XI</local:ClasaEnum>
+                    <local:ClasaEnum>XII</local:ClasaEnum>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Text="Save" 
+                Clicked="OnSaveButtonClicked" />
+            <Button Grid.Column="1" 
+                Text="Delete" 
+                Clicked="OnDeleteButtonClicked"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
+   
